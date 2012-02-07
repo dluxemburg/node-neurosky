@@ -1,6 +1,8 @@
 #node-thinkgear
 
-Client library for the [ThinkGear Socket Protocol](http://developer.neurosky.com/docs/lib/exe/fetch.php?media=app_notes:thinkgear_socket_protocol.pdf) from [NeuroSky](http://neurosky.com/). It's for this:
+Client library for the [ThinkGear Socket Protocol](http://developer.neurosky.com/docs/lib/exe/fetch.php?media=app_notes:thinkgear_socket_protocol.pdf) from [NeuroSky](http://neurosky.com/). 
+
+###You'll need one of [these](http://store.neurosky.com/products/mindwave-1):
 
 ![Fashion!](http://danielluxemburg.com/mindwave.png)
 
@@ -77,4 +79,4 @@ With the occational `{ blinkStrength: 55 }` when you blink.
 - Some tests
 - A more thorough example
 - Deal with raw output
-- Have different types of device signal to emit different events
+- Make different types of device signal emit different events
