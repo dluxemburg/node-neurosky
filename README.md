@@ -72,7 +72,7 @@ The output objects look like this:
 }
 ```
 
-With the occational `{ blinkStrength: 55 }` when you blink.
+With the occasional `{ blinkStrength: 55 }` when you blink.
 
 ###TO DO
 
