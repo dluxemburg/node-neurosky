@@ -1,18 +1,27 @@
 #node-thinkgear
 
-Client library for the [ThinkGear Socket Protocol](http://developer.neurosky.com/docs/lib/exe/fetch.php?media=app_notes:thinkgear_socket_protocol.pdf) from [NeuroSky](http://neurosky.com/).
+Client library for the [ThinkGear Socket Protocol](http://developer.neurosky.com/docs/lib/exe/fetch.php?media=app_notes:thinkgear_socket_protocol.pdf) from [NeuroSky](http://neurosky.com/). It's for this:
+
+![Fashion!](http://danielluxemburg.com/mindwave.png)
 
 ###Usage
 
-Include the module:
+Install with NPM:
 
 ```
-var nodeThinkGear = require('../node-thinkgear');
+$ npm install node-thinkgear
+```
+
+
+Include the module:
+
+```javascript
+var nodeThinkGear = require('node-thinkgear');
 ```
 
 Create a client instance:
 
-```
+```javascript
 var tgClient = nodeThinkGear.createClient({
 	appName: 'My Great Application',
 	appKey: '1234567890abcdef...'
@@ -21,7 +30,7 @@ var tgClient = nodeThinkGear.createClient({
 
 Add a listener for incoming data:
 
-```
+```javascript
 tgClient.on('data',function(data){
 	
 	// magical and wonderful things
@@ -31,7 +40,7 @@ tgClient.on('data',function(data){
 
 Connect to the headset:
 
-```
+```javascript
 tgClient.connect();
 ```
 
@@ -41,7 +50,7 @@ All of this is in the `example/app.js` file too.
 
 The output objects look like this:
 
-```
+```javascript
 { 
 	eSense: { 
 		attention: 53, 
