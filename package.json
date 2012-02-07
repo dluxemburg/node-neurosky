@@ -1,0 +1,12 @@
+{
+  "name": "node-thinkgear",
+  "description": "A Node.js client library for the ThinkGear Socket Protocol from NeuroSky",
+  "author": "Daniel Luxemburg <daniel.luxemburg@gmail.com>",
+  "version": "0.0.1",
+  "main": "node-thinkgear.js",
+  "license" : { 
+    "type": "MIT",
+    "url": "https://raw.github.com/dluxemburg/node-thinkgear/master/LICENSE" 
+  },
+  "repository": "git://github.com/dluxemburg/node-thinkgear.git"
+}
