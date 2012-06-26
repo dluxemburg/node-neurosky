@@ -38,7 +38,7 @@ util.inherits(ThinkGearClient, events.EventEmitter);
 ThinkGearClient.prototype.connect = function(){
 	var self = this;
 	
-	var client = this.client = net.connect(this.port,this.host,function(){
+	var client = this.client = net.createConnection(this.port,this.host,function(){
 		client.write(JSON.stringify(self.auth));
 	});
 
