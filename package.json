@@ -8,5 +8,8 @@
     "type": "MIT",
     "url": "https://raw.github.com/dluxemburg/node-neurosky/master/LICENSE"
   },
+  "devDependencies": {
+    "mocha": "*"
+  },
   "repository": "git://github.com/dluxemburg/node-neurosky.git"
 }
