@@ -1,12 +1,12 @@
 {
-  "name": "node-thinkgear",
-  "description": "A Node.js client library for the ThinkGear Socket Protocol from NeuroSky",
+  "name": "node-neurosky",
+  "description": "A Node.js client library for the MindWave device from NeuroSky",
   "author": "Daniel Luxemburg <daniel.luxemburg@gmail.com>",
   "version": "0.0.1",
-  "main": "node-thinkgear.js",
-  "license" : { 
+  "main": "node-neurosky.js",
+  "license" : {
     "type": "MIT",
-    "url": "https://raw.github.com/dluxemburg/node-thinkgear/master/LICENSE" 
+    "url": "https://raw.github.com/dluxemburg/node-neurosky/master/LICENSE"
   },
-  "repository": "git://github.com/dluxemburg/node-thinkgear.git"
+  "repository": "git://github.com/dluxemburg/node-neurosky.git"
 }
