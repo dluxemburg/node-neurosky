@@ -54,6 +54,11 @@ ThinkGearClient.prototype.connect = function(){
 			}
 		}
 	});
+
+    client.on('error', function(err) {
+        console.log('Error connecting to ThinkGear client. Try starting the ThinkGear Connector app.\n', err);
+        process.exit(1);
+    });
 };
 
 exports.ThinkGearClient = ThinkGearClient;
