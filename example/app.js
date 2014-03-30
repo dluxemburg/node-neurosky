@@ -1,4 +1,4 @@
-var nodeThinkGear = require('../node-neurosky');
+var nodeThinkGear = require('../lib');
 
 var tgClient = nodeThinkGear.createClient({
 	appName:'NodeThinkGear',
