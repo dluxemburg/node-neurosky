@@ -4,7 +4,7 @@ Client library for the [ThinkGear Socket Protocol](http://developer.neurosky.com
 
 ###You'll need one of [these](http://store.neurosky.com/products/mindwave-1):
 
-![Fashion!](http://danielluxemburg.com/mindwave.png)
+![Fashion!](http://home.neurosky.com/wp-content/uploads/2014/01/EEG_Hardware_Section3-1.jpg)
 
 ###Usage
 
