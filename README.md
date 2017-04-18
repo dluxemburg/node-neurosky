@@ -1,12 +1,12 @@
-#node-neurosky
+# node-neurosky
 
 Client library for the [ThinkGear Socket Protocol](http://developer.neurosky.com/docs/lib/exe/fetch.php?media=app_notes:thinkgear_socket_protocol.pdf) from [NeuroSky](http://neurosky.com/).
 
-###You'll need one of [these](http://store.neurosky.com/products/mindwave-1):
+### You'll need one of [these](http://store.neurosky.com/products/mindwave-1):
 
 ![Fashion!](http://home.neurosky.com/wp-content/uploads/2014/01/EEG_Hardware_Section3-1.jpg)
 
-###Usage
+### Usage
 
 Install with NPM:
 
@@ -48,7 +48,7 @@ client.connect();
 
 All of this is in the `example/app.js` file too.
 
-###Data
+### Data
 
 The output objects look like this:
 
@@ -74,7 +74,7 @@ The output objects look like this:
 
 With the occasional `{ blinkStrength: 55 }` when you blink.
 
-###TO DO
+### TO DO
 
 - Some tests
 - A more thorough example
