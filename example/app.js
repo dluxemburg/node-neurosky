@@ -23,28 +23,11 @@ var client = neurosky.createClient({
 	appKey:'0fc4141b4b45c675cc8d3a765b8d71c5bde9390'
 })
 
-client.on('data', function (data) {
-	// Capture Date and Time
-	var datetime = new Date();
-	console.log(datetime)
-	console.log(data)
-
-	// Store incoming stream of data as a record
-	let records = newRecord(datetime, data);
-
-	// Write record to CSV file
-	saveRecord(records);
-
-	console.log("\n")
-});
-
-client.connect()
-
 function saveRecord(records) {
-        csvWriter.writeRecords(records) // returns a promise
-            .then(() => {
-                console.log('...writing to csv');
-                return Promise.resolve();
+    csvWriter.writeRecords(records) // returns a promise
+        .then(() => {
+            console.log('...writing to csv');
+            return Promise.resolve();
         });
 
     process.on('unhandledRejection', up => { console.log(up) })
@@ -67,3 +50,25 @@ function newRecord(datetime, data) {
         }
     ];
 }
+
+client.on('data', function (data) {
+	// Capture Date and Time
+	var datetime = new Date();
+	console.log(datetime)
+	console.log(data)
+
+	// Store incoming stream of data as a record
+	let records = newRecord(datetime, data);
+
+	// Write record to CSV file
+	saveRecord(records);
+
+	console.log("\n")
+});
+
+client.on('error', function (error) {
+    console.log(error);
+});
+
+
+client.connect()
