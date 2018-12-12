@@ -4,12 +4,15 @@
   "author": "Daniel Luxemburg <daniel.luxemburg@gmail.com>",
   "version": "0.0.1",
   "main": "node-neurosky.js",
-  "license" : {
+  "license": {
     "type": "MIT",
     "url": "https://raw.github.com/dluxemburg/node-neurosky/master/LICENSE"
   },
   "devDependencies": {
     "mocha": "*"
   },
-  "repository": "git://github.com/dluxemburg/node-neurosky.git"
+  "repository": "git://github.com/dluxemburg/node-neurosky.git",
+  "dependencies": {
+    "csv-writer": "^1.2.0"
+  }
 }
