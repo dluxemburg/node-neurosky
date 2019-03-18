@@ -4,6 +4,9 @@
   "author": "Daniel Luxemburg <daniel.luxemburg@gmail.com>",
   "version": "0.0.1",
   "main": "node-neurosky.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "license": {
     "type": "MIT",
     "url": "https://raw.github.com/dluxemburg/node-neurosky/master/LICENSE"
