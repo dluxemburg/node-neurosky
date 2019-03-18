@@ -31,3 +31,4 @@ package-lock.json
 
 # Visual Studio IDE dependencies
 .vs/
+.vscode/

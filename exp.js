@@ -1,6 +1,11 @@
 var neurosky = require('./lib')
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
+/* 
+    To Run the program, use: `node app.js UserName_DateTime` 
+    where `UserName_DateTime` is Folder Name where data needs to be stored
+*/
+
 // Read Command Line Arguments for getting DateTime and Username
 const args = process.argv;
 var userFolderName = args[2];
@@ -44,19 +49,6 @@ function saveRecord(records) {
 
 function newRecord(datetime, data, incoming_var) {
     if(incoming_var === 'eSense'){
-        // if data is received, save a copy in payload
-        payload.datetime = datetime;
-        payload.delta = data.eegPower.delta;
-        payload.theta =  data.eegPower.theta,
-        payload.la= data.eegPower.lowAlpha,
-        payload.ha= data.eegPower.highAlpha,
-        payload.lb= data.eegPower.lowBeta,
-        payload.hb= data.eegPower.highBeta,
-        payload.lg= data.eegPower.lowGamma,
-        payload.hg= data.eegPower.highGamma,
-        payload.attention= data.eSense.attention,
-        payload.relaxed= data.eSense.meditation,
-        payload.stressed= 100 - data.eSense.meditation
         return [
             {
                 time: datetime,
@@ -71,24 +63,6 @@ function newRecord(datetime, data, incoming_var) {
                 attention: data.eSense.attention,
                 relaxed: data.eSense.meditation,
                 stressed: 100 - data.eSense.meditation
-            }
-        ];    
-    }else if(incoming_var === 'blinkStrength'){
-        // if blink is caught, use previously saved `payload` data
-        return [
-            {
-                time: payload.datetime,
-                delta: payload.delta,
-                theta: payload.theta,
-                la: payload.la,
-                ha: payload.ha,
-                lb: payload.lb,
-                hb: payload.hb,
-                lg: payload.lg,
-                hg: payload.hg,
-                attention: payload.attention,
-                relaxed: payload.relaxed,
-                stressed: 100 - payload.relaxed
             }
         ];    
     }else{
@@ -127,7 +101,7 @@ client.on('data', function (data) {
         saveRecord(records);
     }else if(data.blinkStrength){
         // Store incoming stream of data as a record
-        let records = newRecord(datetime, data, 'blinkStrength');
+        let records = newRecord(datetime, data, 'eSense');
 
         // Write record to CSV file
         saveRecord(records);
