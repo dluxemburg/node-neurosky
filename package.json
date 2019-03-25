@@ -16,6 +16,7 @@
   },
   "repository": "git://github.com/dluxemburg/node-neurosky.git",
   "dependencies": {
-    "csv-writer": "^1.2.0"
+    "csv-writer": "^1.2.0",
+    "dateformat": "^3.0.3"
   }
 }
