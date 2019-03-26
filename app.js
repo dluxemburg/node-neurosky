@@ -119,7 +119,7 @@ function newBlinkRecord(datetime, data){
 
 client.on('data', function (data) {
 	// Capture Date and Time
-    var now = dateFormat(new Date(), "yyyy-mm-dd hh:MM:ss");
+    var now = dateFormat(new Date(), "yyyy-mm-dd HH:MM:ss");
 	console.log(now);
 	console.log(data);
 
